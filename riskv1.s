@@ -39,7 +39,7 @@ main:
     sw t3,0(t2) #sv[i]=sv[i]*1
     addi s1,x0,0 #j=0
         loop1:
-        slt t0,s1,s4 #i<5?
+        slt t0,s1,s4 #i<10?
         beq t0,x0,done1 #if not, then done
         slli t0,s1,2 #t0=i*4(byte offset)
         add t0,t0,s9 #address of arr1[i]
@@ -48,7 +48,7 @@ main:
         sw t1,0(t0) #arr1[i]=arr1[i]*1
         addi s2,x0,0 #j=0
            loop2:
-           slt t4,s2,s5 #j<4?
+           slt t4,s2,s5 #j<5?
            beq t4,x0,done2 #if not, then done
            slli t4,s2,2 #t0=j*4(byte offset)
            add t4,t4,s10 #address of array[i]
