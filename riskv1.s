@@ -32,7 +32,7 @@ main:
     loop:
     slt t2,s3,s7 #k<13?
     beq t2,x0,done #if not, then done
-    slli t2,s3,2 #t0=k*4(byte offset)
+    slli t2,s3,2 #t2=k*4(byte offset)
     add t2,t2,s11 #address of sv[k]
     lw t3, 0(t2) #t1=sv[k]
     slli t3,t3,0 #t1=sv[k]*1
@@ -50,7 +50,7 @@ main:
            loop2:
            slt t4,s2,s5 #j<5?
            beq t4,x0,done2 #if not, then done
-           slli t4,s2,2 #t0=j*4(byte offset)
+           slli t4,s2,2 #t4=j*4(byte offset)
            add t4,t4,s10 #address of array[i]
            lw t5, 0(t4) #t5=arr1[i]
            slli t5,t5,0 #t5=arr1[i]*1
