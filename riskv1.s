@@ -30,7 +30,7 @@ main:
     la a1, msg3
     ecall
     loop:
-    slt t2,s3,s7 #k<11?
+    slt t2,s3,s7 #k<13?
     beq t2,x0,done #if not, then done
     slli t2,s3,2 #t0=k*4(byte offset)
     add t2,t2,s11 #address of sv[k]
